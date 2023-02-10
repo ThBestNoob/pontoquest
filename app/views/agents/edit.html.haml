@@ -1,0 +1,7 @@
+%h1 Editing agent
+= render "form", agent: @agent
+%br/
+%div
+  = link_to "Show this agent", @agent
+  |
+  \#{link_to "Back to agents", agents_path}

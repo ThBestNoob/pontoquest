@@ -1,0 +1,14 @@
+%div{:id => "#{dom_id question}"}
+  %h1
+    = question.text
+  %p
+    %strong Categoria:
+    = question.category
+
+  %h2
+    Alternativas
+  
+  %lu
+    - question.alternatives.each do |a|
+      %li
+        = a.text
