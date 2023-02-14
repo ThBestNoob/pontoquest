@@ -164,19 +164,4 @@ questions.each do |question|
     if q.valid?
         q.save
     end
-    q.alternatives.each do |a|
-        p a
-        p a.errors.full_messages
-    end
-
-        
-    
-    # puts "Question created"
-
-    # question[1].each do |alternative|
-    #     a = q.alternatives.create alternative
-
-    #     puts "Alternative create"
-    #     p a
-    # end
 end
