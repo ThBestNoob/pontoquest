@@ -3,6 +3,10 @@ class MainController < ApplicationController
     @teams = Team.all
   end
 
+  def answering
+
+  end
+
   def configurations
 
   end

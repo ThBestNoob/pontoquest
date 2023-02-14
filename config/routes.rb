@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'main#index'
+
+  get "/pergunta", to: "main#answering"
   get "/config", to: "main#configurations" 
 
   resources :questions
