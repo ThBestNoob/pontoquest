@@ -41,7 +41,21 @@ agents = [
     {name: "Danilo Vaz", team_id: 2},
     {name: "Denab Serafim", team_id: 2},
     {name: "Fran Oliveira", team_id: 2},
-    {name: "Leonora Martins", team_id: 2}
+    {name: "Leonora Martins", team_id: 2},
+    {name: "Thiago Gerszewski", team_id: 3},
+    {name: "Amanda Maia", team_id: 3},
+    {name: "Ariane Lisboa", team_id: 3},
+    {name: "Dani Lachman", team_id: 3},
+    {name: "Ellen Moura", team_id: 3},
+    {name: "Jhenifer Padilha", team_id: 3},
+    {name: "Maria Vitória", team_id: 3},
+    {name: "Mariana Borecki", team_id: 3},
+    {name: "Mikaela Silva", team_id: 3},
+    {name: "Rafael Silva", team_id: 3},
+    {name: "Stefany Amorin", team_id: 3},
+    {name: "Tammy Okamoto", team_id: 3},
+    {name: "Tati Ferreira", team_id: 3},
+    {name: "Thais Leite", team_id: 3}
 ]
 
 agents.each do |agent|
