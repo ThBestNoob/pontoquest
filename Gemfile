@@ -76,3 +76,5 @@ gem "haml", "~> 6.1"
 gem "html2haml", "~> 2.3"
 
 gem "erb2haml", "~> 0.1.5"
+
+gem "cocoon", "~> 1.2"

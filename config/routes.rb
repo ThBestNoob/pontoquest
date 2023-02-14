@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'main#index'
+  get "/config", to: "main#configurations" 
+
   resources :questions
   resources :agents
   resources :teams

@@ -4,4 +4,6 @@ class Agent < ApplicationRecord
 
   has_many :alternatives, through: :answers
   has_many :questions, through: :answers
+
+  validates :name, presence: true, uniqueness: true
 end

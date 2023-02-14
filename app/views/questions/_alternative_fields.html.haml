@@ -1,0 +1,7 @@
+.nested-fields
+    .field
+        = f.text_field :text
+        = f.label 'Correta?'
+        = f.check_box :correct
+    .remove
+        = link_to_remove_association "| X |", f

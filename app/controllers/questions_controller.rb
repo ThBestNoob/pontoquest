@@ -13,6 +13,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   def new
     @question = Question.new
+    4.times { @question.alternatives.build }
   end
 
   # GET /questions/1/edit
@@ -25,7 +26,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        format.html { redirect_to question_url(@question), notice: "Question was successfully created." }
+        format.html { redirect_to question_url(@question), notice: "Pergunta criada com sucesso!" }
         format.json { render :show, status: :created, location: @question }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class QuestionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def question_params
-      params.require(:question).permit(:text, :category)
+      params.require(:question).permit(:text, :category, alternatives_attributes: [:text, :correct, :_destroy])
     end
 end

@@ -1,0 +1,19 @@
+.configurations
+    %h1 
+        %strong
+            Configurações
+
+    .options
+        .buttons    
+            %button{:onclick => "location.href ='/questions';"}
+                %img{src: "icons/question-circle-fill.svg", height: '48px'}
+                %h2 Perguntas
+            %br
+            %button{:onclick => "location.href ='/agents';"}
+                %img{src: "icons/person-fill.svg", height: '48px'}
+                %h2 Colaboradores
+            %br
+            %button{:onclick => "location.href ='/teams';"}
+                %img{src: "icons/people-fill.svg", height: '48px'}
+                %h2 Equipes
+            %br

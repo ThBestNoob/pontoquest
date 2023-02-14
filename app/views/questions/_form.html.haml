@@ -7,11 +7,22 @@
       %ul
         - question.errors.each do |error|
           %li= error.full_message
+
   %div
-    = form.label :text, style: "display: block"
+    = form.label :pergunta, style: "display: block"
     = form.text_area :text
   %div
-    = form.label :category, style: "display: block"
+    = form.label :categoria, style: "display: block"
     = form.text_field :category
+  
+  %br
+  %h3 Alternativas
   %div
-    = form.submit
+    = form.fields_for :alternatives do |alternative|
+      = render 'alternative_fields', f: alternative
+  .links
+    = link_to_add_association 'Adicionar alternativa', form, :alternatives
+  
+  
+  %div
+    = button_tag :salvar, type: 'submit'

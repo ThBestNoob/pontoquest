@@ -1,0 +1,24 @@
+.main
+    .header 
+        .logo
+            %img{src: "/logo.png", height: '100px'} 
+    
+    %button.config{:onclick => "location.href ='/config';"}
+        %img{src: "icons/gear-fill.svg", height: '32px'}
+    .teams
+        -@teams.each do |team|
+            .team_card
+                .team_name
+                    %img{src:"/mascotes/#{team.name.downcase}.png", height: "90px"}
+                    %p
+                        %strong
+                            = team.name
+                .coordinator
+                    %p
+                        %strong
+                            = team.coordinator 
+                .agents
+                    -team.agents.each do |agent|
+                        .agent
+                            %p
+                                = agent.name
