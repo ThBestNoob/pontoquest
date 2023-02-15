@@ -1,1 +1,26 @@
-%h1 Responda
+.answering 
+    %h1
+        %strong Responda
+
+    .question
+        %h2
+            %strong 
+                = @question.text
+
+    -# = render "correct"
+
+    = turbo_frame_tag "correction" do
+
+        = form_with url: '/pergunta', method: :post do |form|
+            = form.hidden_field :question, value: @question.id
+            .alternatives
+                -@question.alternatives.each do |a|
+                    = label_tag a.id, class: 'alternative' do
+                        = form.radio_button :alternative, a.id
+                        .text  
+                            %strong
+                                = a.text    
+            
+            %div
+                = button_tag 'Confirmar', type: 'submit'
+

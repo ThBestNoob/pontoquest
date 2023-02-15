@@ -19,6 +19,7 @@
                             = team.coordinator 
                 .agents
                     -team.agents.each do |agent|
-                        .agent
-                            %p
-                                = agent.name
+                        %a{:href => "/pergunta"}
+                            .agent
+                                %p
+                                    = agent.name

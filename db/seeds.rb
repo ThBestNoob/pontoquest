@@ -131,7 +131,7 @@ questions = [
         }
     },
     {
-        text: "Sobre o SSO, quais logins poderão ser utilizados?",
+        text: "De acordo com o email enviado sobre novidades no Sistema Pontomais, a disponibilização do Single Sign On, irá permitir que um usuário efetue login com um único ID em vários sistemas plataformas. Quais dessas plataformas será possível utilizar a autenticação (SSO)?",
         category: "Novidade",
         alternatives_attributes: {
             0=>{
@@ -139,15 +139,59 @@ questions = [
                 correct: true
             },
             1=>{
-                text: "Google e Linkedin",
+                text: "Google, Facebook e Linkedin",
                 correct: false
             },
             2=>{
-                text: "Facebook e Hotmail",
+                text: "Microsoft, Facebook e Linkedin",
                 correct: false
             },
             3=>{
-                text: "Google e Facebook",
+                text: "Instagram, Facebook e Linkedin",
+                correct: false
+            }
+        }
+    },
+    {
+        text: "De acordo com o email enviado sobre novidades no Sistema Pontomais, a liberação de acesso ao controle de férias e folgas via app atualmente esta liberada somente para nós da Pontomais e alguns clientes e planos específicos. Quais os planos que já estão sendo liberados essa funcionalidade?",
+        category: "Novidade",
+        alternatives_attributes: {
+            0=>{
+                text: "Essencial, Fácil e Eficaz",
+                correct: true
+            },
+            1=>{
+                text: "Somente para Fácil e Eficaz",
+                correct: false
+            },
+            2=>{
+                text: "Fácil e Eficaz",
+                correct: false
+            },
+            3=>{
+                text: "Somente Eficaz",
+                correct: false
+            }
+        }
+    },
+    {
+        text: "Quais as movimentações que a equipe de QE começou a realizar via API em caráter de exceção, ou seja, como um apoio ao cliente quando houver necessidade?",
+        category: "Procedimento",
+        alternatives_attributes: {
+            0=>{
+                text: "Saldo BH, Planilha de parametrização, Alteração de CPF e algumas Alterações em massa",
+                correct: false
+            },
+            1=>{
+                text: "Planilha de parametrização, Alteração de CPF e Alterações em massa",
+                correct: true
+            },
+            2=>{
+                text: "Planilha de parametrização, Alteração de CPF e algumas Alterações em massa",
+                correct: false
+            },
+            3=>{
+                text: "Planilha de parametrização e Alteração de CPF",
                 correct: false
             }
         }
