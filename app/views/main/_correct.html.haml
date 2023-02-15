@@ -1,0 +1,11 @@
+
+= turbo_frame_tag "correction" do
+    .correction{style: "color: green; border: 10px solid green; background-color: var(--lightmain);"}
+        %h1 
+            %strong CORRETO
+
+            
+    %button.config{:onclick => "location.href ='/pergunta';"}
+        Responder outra
+    %button.config{:onclick => "location.href ='/';"}
+        Voltar

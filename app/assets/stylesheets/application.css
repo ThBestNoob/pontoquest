@@ -26,6 +26,11 @@ body {
    padding: 0;
 }
 
+a, a:hover{
+   text-decoration: none;
+   color: black
+}
+
 :root {
    --main: #0dbf2b;
    --darkmain: #21951E;

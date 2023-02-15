@@ -1,0 +1,77 @@
+.answering{
+    padding: 25px 50px;
+    height: 100vh;
+    background-image: url('sistema.png');
+    background-size: cover;
+}
+
+.answering h1{
+    margin-bottom: 50px;
+}
+
+.question h2{
+    background-color: var(--darkmain);
+    color: white;
+    padding: 50px;
+    border-radius: var(--border);
+}
+
+.answering button{
+    padding: 10px 20px;
+}
+
+.answering .correction{
+    font-size: 38px;
+    text-shadow: 1 1 10px black;
+    height: 200px;
+    margin: 50px 0;
+    /* text-shadow: 2px 0 gold, -2px 0 gold, 0 2px gold, 0 -2px gold,
+             1px 1px gold, -1px -1px gold, 1px -1px gold, -1px 1px gold; */
+    border-radius: var(--border);
+    display: grid;
+    place-items: center;
+}
+
+.answering .correction h1{
+    margin: 0;
+}
+.answering .alternatives{
+    margin: 25px 0;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 20vh;
+}
+
+.answering .alternatives .alternative{
+    background-color: var(--lightmain);
+    /* background-color: white; */
+    border: 5px solid green;
+    border-radius: var(--sborder);
+    position: relative;
+    font-weight: bold;
+    font-size: 32px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.alternative .text{
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.answering .alternatives input{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.answering .alternatives .alternative input:checked ~ .text{
+    background-color: var(--main);
+}
