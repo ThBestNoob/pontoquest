@@ -14,4 +14,5 @@
 3. Criar senha para cada agente:
 	- Adicionar coluna 'pin' no model Agent ✅
 	- Configurar botão do agente na página inicial para pedir o pin antes de redirecionar para /pergunta
+		- Criar janela para preenhcimento do pin ✅
 	- Ao inserir o pin, enviar requisição para uma action que irá conferir se está correto e redirecionar para /pergunta

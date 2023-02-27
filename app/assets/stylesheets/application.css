@@ -28,7 +28,13 @@ body {
 
 a, a:hover{
    text-decoration: none;
-   color: black
+   color: black;
+   cursor: pointer;
+}
+
+.alert{
+   background-color: lightcoral;
+   color: red;
 }
 
 :root {
@@ -171,6 +177,41 @@ input{
    border-radius: var(--sborder);
    width: 98%;
 }
+
+.auth{
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(0,0,0,.5);
+   height: 100vh;
+   width: 100%;
+   display: grid;
+   place-items: center;
+}
+
+.auth .window{
+   height: auto;
+   width: 500px;
+   padding: 25px;
+   padding-bottom: 50px;
+   background-color: var(--lightmain);
+   border: 5px solid var(--darkmain);
+   border-radius: var(--border);
+   display: grid;
+   place-items: center;
+}
+
+.auth .window input{
+   width: 100%;
+   padding: 15px;
+   margin-bottom: 24px;
+   border-radius: var(--sborder);
+}
+
+.auth.hidden{
+   display: none;
+}
+
 
 /* #endregion */
 

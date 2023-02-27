@@ -19,7 +19,43 @@
                             = team.coordinator 
                 .agents
                     -team.agents.each do |agent|
-                        %a{:href => "/pergunta"}
+                        %a{:onclick => "showAuth(#{agent.id})"}
                             .agent
                                 %p
                                     = agent.name
+
+    .auth.hidden#auth
+        .window
+            %h1
+                Senha
+            = form_with url: '/', method: :post do |f|
+                = f.hidden_field :agent, value: 1
+                = f.text_field :pin
+                = button_tag :confirmar, type: 'submit'
+            
+            = turbo_frame_tag "alert" do
+                - flash.each do |type, msg|
+                    .alert#flash
+                        %strong
+                            = msg
+
+            = button_tag :voltar, onclick: "hideAuth()"
+                
+
+:javascript
+
+
+    function showAuth(id){
+        var element = document.getElementById("auth")
+
+        element.classList.toggle("hidden")
+
+        element = document.getElementById("agent")
+
+        element.value = id;
+    }
+
+    function hideAuth(){
+        var element = document.getElementById("auth")
+        element.classList.toggle("hidden")
+    }

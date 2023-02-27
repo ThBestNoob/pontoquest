@@ -3,24 +3,35 @@ class MainController < ApplicationController
     @teams = Team.all
   end
 
+  def authenticate
+    puts "\n\n\n\n"
+    puts params
+    puts "\n\n\n\n"
+
+    agent = Agent.find(params[:agent])
+
+    if params[:pin] == agent.pin
+      redirect_to action: "answering", agent: params[:agent]
+    else
+      if params[:pin] == ""
+        flash[:alert] = "Preencha a senha para prosseguir"
+        show_alert
+      else
+        flash[:alert] = "Senha incorreta"
+        show_alert
+      end
+    end
+  end
+
   def answering
     @question = Question.all.sample
     @answer = Answer.new
+    @agent = Agent.find(params[:agent])
   end
 
   def answer
 
     @alternative = Alternative.find(params[:alternative])
-    # puts "\n_____________________________________\n\n"
-    # puts "Questão: #{params[:question]}"
-    # puts "Alternativa selecionada: #{params[:alternative]}"
-
-    # if alternative.correct
-    #   puts 'CORRETO'
-    # else
-    #   puts 'INCORRETO'
-    # end
-    # puts "\n_____________________________________\n"
 
     show_correction
   end
@@ -30,6 +41,13 @@ class MainController < ApplicationController
   end
 
   private
+
+  def show_alert
+    render turbo_stream:
+      turbo_stream.replace("alert",
+        partial: "main/flash"
+      )
+  end
 
   def show_correction
 
