@@ -1,0 +1,18 @@
+1. Clicar no nome e redirecionar para a página com uma pergunta aleatória para ser respondida ✅
+	
+	
+2. Ao selecionar uma alternativa e clicar em 'Confirmar' receber um feedback se a resposta foi certa ou errada ✅
+	Turbo Stream ✅
+
+-----------------------------------------------------------------------------------------------------------------------------	
+3. Criar usuários para cada agente e configurar para realizar o login ao clicar no nome e deslogar ao voltar para o inicio ❌
+	- Criar usuários
+	- Criar condição de autenticar ao acessar '/perguntas'
+	- Criar condição de deslogar ao acessar o root
+-----------------------------------------------------------------------------------------------------------------------------
+
+3. Criar senha para cada agente:
+	- Adicionar coluna 'pin' no model Agent ✅
+	- Configurar botão do agente na página inicial para pedir o pin antes de redirecionar para /pergunta
+		- Criar janela para preenhcimento do pin ✅
+	- Ao inserir o pin, enviar requisição para uma action que irá conferir se está correto e redirecionar para /pergunta
