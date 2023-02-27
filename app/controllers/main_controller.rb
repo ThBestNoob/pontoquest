@@ -30,8 +30,13 @@ class MainController < ApplicationController
   end
 
   def answer
-
+    @agent = Agent.find(params[:agent])
+    @question = Question.find(params[:question])
     @alternative = Alternative.find(params[:alternative])
+
+    answer = Answer.new(agent: @agent, question: @question, alternative: @alternative)
+    
+    answer.save
 
     show_correction
   end
