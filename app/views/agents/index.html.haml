@@ -1,8 +1,30 @@
-%p{:style => "color: green"}= notice
-%h1 Agents
-#agents
-  - @agents.each do |agent|
-    = render agent
-    %p
-      = link_to "Show this agent", agent
-= link_to "New agent", new_agent_path
+.agents_index
+
+  = render "sidemenu"
+  .page
+    %h1#title Colaboradores
+    -# %p{:style => "color: green"}= notice
+    
+    .list
+      .teams
+        - @teams.each do |team|
+          .team
+            .team_name
+              %img{src:"/mascotes/#{team.name.downcase}.png", height: "55px"}
+              %p
+                %strong
+                  = team.name
+            .agents
+              - team.agents.each do |agent|
+                %a.agent{href:"/agents/#{agent.id}"}
+                  .name
+                    = agent.name
+                  .score
+                    %p 
+                      %strong
+                        1000
+      .bottom
+        %button{:onclick => "location.href ='/agents/new';"}
+          %img{src:"icons/plus.svg", height:"22px"}
+          Novo colaborador
+

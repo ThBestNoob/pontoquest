@@ -1,7 +1,22 @@
-%div{:id => "#{dom_id agent}"}
-  %p
-    %strong Name:
-    = agent.name
-  %p
-    %strong Team:
-    = agent.team_id
+%a{href: "/agents/#{agent.id}"}
+  .agent{:id => "#{dom_id agent}"}
+    - correct_answers = agent.alternatives.where(correct: true).length
+    .name
+      %h2
+        %strong
+        = agent.name
+      %p
+        %strong
+          = agent.team.name
+    .questions
+      %h3 Respondidas
+      %p
+        = agent.questions.length
+    .answers 
+      %h3 Respostas certas
+      %p
+        = correct_answers
+    .score 
+      %h3 Pontuação
+      %p
+        = correct_answers * 175

@@ -1,4 +1,7 @@
 class MainController < ApplicationController
+
+  http_basic_authenticate_with name: "pontomais", password: "ponto123", only: :configurations
+
   def index
     @teams = Team.all
   end
