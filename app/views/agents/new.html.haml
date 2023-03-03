@@ -1,5 +1,9 @@
-%h1 New agent
-= render "form", agent: @agent
-%br/
-%div
-  = link_to "Back to agents", agents_path
+.config
+
+  = render "sidemenu"
+  .page
+    %h1 New agent
+    = render "form", agent: @agent
+    %br/
+    %div
+      = link_to "Back to agents", agents_path

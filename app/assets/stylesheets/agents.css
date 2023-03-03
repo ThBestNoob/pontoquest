@@ -1,4 +1,4 @@
-.agents_index{
+.config{
     padding: 0;
     background-image: url("/sistema.png");
     background-size: 100% 100vh;
@@ -28,10 +28,14 @@
 
 .page{
     display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
     place-items: center;
     height: 100vh;
     overflow-y: hidden;
     padding: 20px;
+    min-height: 0;
+    min-width: 0;
 }
 
 .page #title{
@@ -39,16 +43,19 @@
     padding: 20px 244px;
     border-radius: var(--border);
     box-shadow: 4px 4px 10px grey;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
-.agents_index .list{
+.config .list{
     background-color: #EFEEEA;
-    min-width: 95%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
     padding: 22px;
+    padding-bottom: 10px;
     justify-content: space-between;
-    gap: 2px;
-    height: 85vh;
+    gap: 50px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -59,11 +66,14 @@
     width: 100%;
     justify-content: space-between;
     height: 95%;
+    gap: 20px;
+    padding-bottom: 5px;
+    overflow-x: scroll;
 }
 
 .list .teams .team{
     height: 100%;
-    width: 300px;
+    width: 1fr;
     padding: 15px;
     background-color: white;
     border: 5px solid var(--darkmain);
@@ -85,7 +95,7 @@
 .team .agents{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 1fr;
+    flex: 1;
 }
 
 .team .agents .agent{

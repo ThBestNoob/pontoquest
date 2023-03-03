@@ -1,6 +1,10 @@
-.new
-  %h1 Nova pergunta
-  = render "form", question: @question
-  %br/
-  %div
-    = link_to "Voltar", questions_path
+.config
+
+  = render "sidemenu"
+  .page
+    .new
+      %h1 Nova pergunta
+      = render "form", question: @question
+      %br/
+      %div
+        = link_to "Voltar", questions_path

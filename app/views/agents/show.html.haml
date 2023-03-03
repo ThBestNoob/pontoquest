@@ -1,8 +1,12 @@
-%p{:style => "color: green"}= notice
-= render @agent
-%div
-  = link_to "Edit this agent", edit_agent_path(@agent)
-  |
-  \#{link_to "Back to agents", agents_path}
-  
-  \#{button_to "Destroy this agent", @agent, method: :delete}
+.config
+
+  = render "sidemenu"
+  .page
+    %p{:style => "color: green"}= notice
+    = render @agent
+    %div
+      = link_to "Edit this agent", edit_agent_path(@agent)
+      |
+      \#{link_to "Back to agents", agents_path}
+      
+      \#{button_to "Destroy this agent", @agent, method: :delete}

@@ -3,8 +3,8 @@
         .logo
             %img{src: "/logo.png", height: '100px'} 
     
-    %button.config{:onclick => "location.href ='/agents';"}
-        %img{src: "icons/gear-fill.svg", height: '32px'}
+    %button.gear{:onclick => "location.href ='/agents';"}
+        %img{src: "icons/gear-fill.svg", height: '22px'}
     .teams
         -@teams.each do |team|
             .team_card
